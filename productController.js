@@ -10,6 +10,6 @@ exports.getOrigin = async (req, res) => {
         res.json({ origin });
     } catch (error) {
         console.error('Error fetching product origin:', error);
-        res.status(500).json({ error: 'Unable to retrieve product origin information' });
+        res.status(500).json({ error: 'There was an issue retrieving origin for the specified product ID.' });
     }
 };
