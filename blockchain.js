@@ -7,6 +7,9 @@ const contractABI = []; // ABI of the smart contract
 const contract = new web3.eth.Contract(contractABI, contractAddress);
 
 async function getProductOrigin(productId) {
+    if (!web3.utils.isHexStrict(productId)) {
+        throw new Error('Invalid productId: Must be a valid hexadecimal string.');
+    }
     try {
         const origin = await contract.methods.getProductOrigin(productId).call();
         return origin;
