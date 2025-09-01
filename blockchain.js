@@ -7,8 +7,13 @@ const contractABI = []; // ABI of the smart contract
 const contract = new web3.eth.Contract(contractABI, contractAddress);
 
 async function getProductOrigin(productId) {
-    const origin = await contract.methods.getProductOrigin(productId).call();
-    return origin;
+    try {
+        const origin = await contract.methods.getProductOrigin(productId).call();
+        return origin;
+    } catch (error) {
+        console.error('Error fetching product origin:', error);
+        throw error;
+    }
 }
 
 module.exports = { getProductOrigin };
