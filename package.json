@@ -1,0 +1,14 @@
+{
+  "name": "hệ-thống-giao-dịch-bán-lẻ-blockchain",
+  "version": "1.0.0",
+  "description": "Hệ thống giao dịch bán lẻ sử dụng công nghệ blockchain",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0",
+    "web3": "^1.5.0"
+  }
+}
