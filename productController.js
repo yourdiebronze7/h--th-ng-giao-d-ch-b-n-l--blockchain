@@ -2,6 +2,9 @@ const productService = require('./productService');
 
 exports.getOrigin = async (req, res) => {
     const productId = req.params.id;
+    if (!productId) {
+        return res.status(400).json({ error: 'Product ID is required' });
+    }
     try {
         const origin = await productService.getProductOrigin(productId);
         res.json({ origin });
