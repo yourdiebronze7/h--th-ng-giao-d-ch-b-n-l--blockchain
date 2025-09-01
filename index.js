@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Chào mừng đến với Hệ Thống Giao Dịch Bán Lẻ Blockchain');
+    res.send('Welcome to the Retail Blockchain Transaction System');
 });
 
 app.listen(PORT, () => {
-    console.log(`Server đang chạy trên http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
