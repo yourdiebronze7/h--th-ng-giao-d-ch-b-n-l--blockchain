@@ -6,6 +6,6 @@ exports.getOrigin = async (req, res) => {
         const origin = await productService.getProductOrigin(productId);
         res.json({ origin });
     } catch (error) {
-        res.status(500).json({ error: 'Không thể lấy thông tin nguồn gốc sản phẩm' });
+        res.status(500).json({ error: 'Unable to retrieve product origin information' });
     }
 };
